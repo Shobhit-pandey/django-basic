@@ -24,24 +24,24 @@
           <div id="navbar" class="navbar-collapse collapse">
               {% if user.is_authenticated %}
             <ul class="nav navbar-nav">
-             <li><a href="/accounts/about">About</a></li>
-              <li><a href="/accounts/contact">Contact</a></li>
-                <li><a href="/accounts/logout">logout</a></li>
-                <li><a href="/accounts/profile">Profile</a></li>
-                <li><a href="/accounts/profile/edit">Edit Profile</a></li>
-                <li><a href="/accounts/change-password">change Password</a></li>
-                <li><a href="/accounts/reset-password">Forget Password?</a></li>
+             <li><a href={% url 'accounts:about' %}>About</a></li>
+              <li><a href={% url 'accounts:contact' %}>Contact</a></li>
+                <li><a href={% url 'accounts:logout' %}>logout</a></li>
+                <li><a href={% url 'accounts:view_profile' %}>Profile</a></li>
+                <li><a href={% url 'accounts:edit_profile' %}>Edit Profile</a></li>
+                <li><a href={% url 'accounts:change_password' %}>change Password</a></li>
+                <li><a href={% url 'accounts:reset_password' %}>Forget Password?</a></li>
             </ul>
                 {% else %}
                <ul class="nav navbar-nav">
-             <li><a href="/accounts/about">About</a></li>
-              <li><a href="/accounts/contact">Contact</a></li>
+             <li><a href={% url 'accounts:about' %}>About</a></li>
+              <li><a href={% url 'accounts:contact' %}>Contact</a></li>
 
-                <li><a href="/accounts/reset-password">Forget Password?</a></li>
+                 <li><a href={% url 'accounts:reset_password' %}>Forget Password?</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-            <li><a href="/accounts/login">Login</a></li>
-                <li><a href="/accounts/register">Register</a></li>
+            <li><a href={% url 'accounts:login' %}>Login</a></li>
+                <li><a href={% url 'accounts:register' %}>Register</a></li>
 
             </ul>
               {% endif %}
