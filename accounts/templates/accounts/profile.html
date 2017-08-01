@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block head %}
+    <title>Profile</title>
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+   You have successfully logged in!!!
+    <p>
+        your first name is
+        {{ user.first_name }}
+    </p>
+    <p>
+        your last name is
+        {{ user.last_name }}
+    </p>
+    <p>
+        your email is
+        {{ user.email }}
+    </p>
+{% endblock %}
+</body>
+</html>
