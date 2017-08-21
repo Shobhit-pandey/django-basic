@@ -10,18 +10,49 @@
 <body>
 {% block body %}
    You have successfully logged in!!!
+     <br>
+     <br>
+     <p>
+        your profile pic is
+        <img src="{{ user.userprofile.image.url }}" height="150px" width="150px">
+    </p>
     <p>
         your first name is
         {{ user.first_name }}
     </p>
+     <br>
     <p>
         your last name is
         {{ user.last_name }}
     </p>
+     <br>
     <p>
         your email is
         {{ user.email }}
     </p>
+     <br>
+     <p>
+        your username is
+        {{ user.userprofile }}
+    </p>
+     <br>
+     <p>
+        your mobile no. is
+        {{ user.userprofile.phone }}
+    </p>
+     <br>
+     <p>
+        Discription is
+        {{ user.userprofile.description }}
+    </p>
+    <br>
+     <p>
+        your city is
+        {{ user.userprofile.city }}
+    </p>
+    <br>
+
+
 {% endblock %}
 </body>
 </html>
